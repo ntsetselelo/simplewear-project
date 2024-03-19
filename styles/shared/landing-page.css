@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Source Code Pro', monospace;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+.header {
+   
+    padding-left: 15px;
+    padding-right: 15px;
+  
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.header-left-section{
+    width: 100px;
+}
+
+.header-middle-section{
+    flex: 1;
+    max-width: 850px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.header-right-section{
+    width: 100px;
+    display: flex;
+    justify-content:center;
+    margin-left:80p;
+}
+
+.header-right-section i{
+    text-decoration:none;
+    font-size:30px;
+    margin-right: 50px;
+    color:black;
+    display:inline-block;
+    
+}
+  
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    align-items:center ;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 10px;
+    position: relative;
+
+}
+nav ul li a::after{
+ content: '';
+ width: 0;
+ height:3px;
+ background:black;
+ position: absolute;
+ left:0;
+ bottom:-6px;
+ transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+
+nav .fas {
+    display:none;
+}
+.header-right-section .fas{
+   
+    display:none;
+    
+}
+.logo-small{
+    display:none;
+}
+
+@media only screen and (max-width:700px){
+    .logo-small{
+        display:flex;
+
+    }
+    .logo-large{
+        display:none;
+    }
+}
+@media only screen and (max-width:600px){
+    .header-right-section i{
+        text-decoration:none;
+        font-size:30px;
+        margin-right: 20px;
+        color:black;
+        display:inline-block;
+        
+    }
+
+}
+
+@media only screen and (max-width:900px){
+ 
+    .header-right-section{
+        width:100px;
+    }
+    nav .fas {
+        display:flex;
+        font-size:25px;
+        margin-right: 30px;   
+    }
+    .header-right-section .fas{
+        display: flex;
+        
+    }
+    
+    nav ul{
+        
+        background:#262626;
+        color:white;
+        position:fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top:50px;
+        z-index:2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin:25px;
+        color: white;
+    }
+    nav ul li a{
+        color: white;
+    }
+    nav ul .fas{
+        position:absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+    }
+}
