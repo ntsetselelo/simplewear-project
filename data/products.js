@@ -1,4 +1,4 @@
-const products = [{
+export const products = [{
   id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
   image:'images/products/nike-black-shorts.webp',
   name: 'Nike Woven Lined Flow Shorts - Black | Pavement - Pavement NZ',
