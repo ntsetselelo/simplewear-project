@@ -32,8 +32,9 @@ export function renderOrderSummary(){
         
         
         cartSummaryHTML+=
-    `
+        `
         <div class="cart-item-container 
+          js-cart-item-container
         js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
                 Delivery date: ${dateString}
@@ -50,7 +51,8 @@ export function renderOrderSummary(){
                 <div class="product-price">
                     R${formatCurrency(matchingProduct.priceCents)}
                 </div>
-                <div class="product-quantity">
+                <div class="product-quantity
+                  js-product-quantity-${matchingProduct.id}">
                     <span>
                     Quantity: <span class="quantity-label">${cartItem.quantity}</span>
                     </span>
@@ -58,7 +60,8 @@ export function renderOrderSummary(){
                     Update
                     </span>
                     <span class="delete-quantity-link link-primary 
-                    js-delete-link" data-product-id = "${matchingProduct.id}">
+                    js-delete-link 
+                    js-delete-link-${matchingProduct.id}" data-product-id = "${matchingProduct.id}">
                     Delete
                     </span>
                 </div>
@@ -68,12 +71,12 @@ export function renderOrderSummary(){
                 <div class="delivery-options-title">
                     Choose a delivery option:
                 </div>
-                ${deliveryOptionsHTML(matchingProduct, cartItem)}
+                    ${deliveryOptionsHTML(matchingProduct, cartItem)}
                 </div>
             </div>
             </div>
 
-    `;
+          `;
     });
 
     function deliveryOptionsHTML(matchingProduct, cartItem){
@@ -119,8 +122,7 @@ export function renderOrderSummary(){
     }
 
 
-    document.querySelector('.js-order-summary')
-    .innerHTML = cartSummaryHTML;
+    document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 
     document.querySelectorAll('.js-delete-link')
     .forEach((link) => {
