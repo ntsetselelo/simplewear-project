@@ -163,4 +163,11 @@
   .simplewear-header-left-section {
     width: 100px;
   }
+  .simplewear-logo{
+    display:none;
+  }
+ .simplewear-mobile-logo{
+   display:flex;
+   color:black;
+ }
 }
