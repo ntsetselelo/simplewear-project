@@ -39,8 +39,8 @@ input, select, button {
 }
 
 .button-primary:active {
-  background: rgb(255, 216, 20);
-  border-color: rgb(252, 210, 0);
+  background: 1px solid rgb(213, 217, 217);
+  border-color:1px solid rgb(213, 217, 217);
   box-shadow: none;
 }
 
@@ -80,7 +80,7 @@ input, select, button {
 }
 
 .link-primary:hover {
-  color: rgb(196, 80, 0);
+  color: 1px solid rgb(213, 217, 217);
 }
 
 /* Styles for dropdown selectors. */
@@ -97,7 +97,7 @@ select {
 
 select:focus,
 input:focus {
-  outline: 2px solid rgb(255, 153, 0);
+  outline: none;
 }
 
 /* landing page*/
