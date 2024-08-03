@@ -42,9 +42,12 @@
   }
 }
 
-.cart-item-container,
+.cart-item-container{
+  border-radius: 4px;
+  padding: 18px;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
 .payment-summary {
-  border: 1px solid rgb(222, 222, 222);
   border-radius: 4px;
   padding: 18px;
 }
@@ -192,12 +195,13 @@
 }
 
 .total-row {
-  color: rgb(177, 39, 4);
-  font-weight: 700;
+ 
   font-size: 18px;
 
   border-top: 1px solid rgb(222, 222, 222);
   padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgb(222, 222, 222);
 }
 
 .place-order-button {
@@ -205,7 +209,9 @@
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 8px;
-
+  background: #f5f5f5;
   margin-top: 11px;
   margin-bottom: 15px;
+  border:none;
+  border-radius:20px;
 }
