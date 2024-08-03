@@ -22,13 +22,14 @@ export function renderOrderSummary(){
         const deliveryOption = getDeliveryOption(deliveryOptionId);
 
         
-
+        /*
         const today = dayjs();
         const deliveryDate = today.add(
             deliveryOption.deliveryDays, 'days'
         );
         const dateString = deliveryDate.format('dddd, MMMM D');
-    
+
+        */
         
         
         cartSummaryHTML+=
@@ -36,9 +37,7 @@ export function renderOrderSummary(){
         <div class="cart-item-container 
           js-cart-item-container
         js-cart-item-container-${matchingProduct.id}">
-            <div class="delivery-date">
-                Delivery date: ${dateString}
-            </div>
+   
 
             <div class="cart-item-details-grid">
                 <img class="product-image"
